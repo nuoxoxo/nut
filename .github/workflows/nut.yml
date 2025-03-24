@@ -40,11 +40,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: ./dist
       - name: nut
         id: deployment
         uses: actions/deploy-pages@v4
